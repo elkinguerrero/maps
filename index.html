@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E L K I N</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/tor_b.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/maps.js"></script>
+    <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzdk-6EADXd9aoTtlPtP_QWa0024GejeI&callback=initMap&libraries=&v=weekly" defer></script>
+</head>
+<body>
+    <!--div qu contiene el pop up de la descripción sobre cada punto-->
+    <div class="card text-black bg-light mb-2 popup_descripcion">
+        <div class="card-header titulo__popup"><h4 class="popup_pais">Pais</h4></div>
+        <div class="card-body">
+            <h5 class="card-title">
+                <div class="row">
+                    <div class="col izquierda">Total Casos:</div>
+                    <div class="col popup_casos">0</div>
+                </div> 
+            </h5>
+            <p class="card-text">
+                <div class="row">
+                    <div class="col izquierda">Activos:</div>
+                    <div class="col popup_activo">0</div>
+                </div> 
+                <div class="row">
+                    <div class="col izquierda">Recuperados:</div>
+                    <div class="col popup_recuperados">0</div>
+                </div> 
+                <div class="row">
+                    <div class="col izquierda">Fallecidos:</div>
+                    <div class="col popup_fallecidos">0</div>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="abrir_pop_up">+</div>
+    <!--div qu contiene el menu a la izquierda con las opciones de filtro-->
+    <div class="menu_lateral center">
+        <div class="contenedor_titulo ocultar_inicio">
+            <div class="cerrar_pop_up">X</div>
+            <div class="row">
+                <div class="col titulo_menu">Casos confirmados</div>
+            </div>
+        </div>
+        <div class="row texto_menu ocultar_inicio">
+            <div class="col izquierda">Casos activos</div>
+            <div class="col menu_casos_activos">0</div>
+        </div>
+        <div class="row texto_menu ocultar_inicio">
+            <div class="col izquierda">Casos recuperados</div>
+            <div class="col menu_casos_recuperados">0</div>
+        </div>
+        <div class="row texto_menu ocultar_inicio">
+            <div class="col izquierda">Fallecidos</div>
+            <div class="col menu_casos_fallecidos">0</div>
+        </div>
+        <div><hr></div>
+        <div class="row texto_menu ocultar_inicio">
+            <div class="col izquierda">Casos Totales</div>
+            <div class="col menu_casos_totales">0</div>
+        </div>
+        <div class="dropdown izquierda menu_boton ocultar_inicio">
+            <button onclick="myFunction()" class="btn btn-primary boton_menu">Filtrar por países</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Buscar.." id="myInput" onkeyup="filterFunction()">
+            </div>
+        </div>
+        <div class="row texto_menu ocultar_inicio">
+            <div class="col poligonos_borrar"></div>
+        </div>
+        <div class="row puntero_ocultar ocultar_inicio">
+            <div class="col izquierda">Ocultar puntos</div>
+            <div class="col">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        
+    </div>
+    <!--div qu contiene el mapa-->
+    <div id="map"></div>
+</body>
+</html> 

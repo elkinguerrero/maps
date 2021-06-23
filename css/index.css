@@ -1,0 +1,262 @@
+#map {
+    height: 100%;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.center{
+    text-align: center;
+}
+.izquierda{
+    text-align: left;
+}
+.popup_descripcion {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    text-align: center;
+    max-width: 18rem;
+    display:none;
+}
+.titulo__popup{
+    background-color: #2a4f73;
+    color: white;
+}
+.menu_lateral{
+    position: fixed;
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    left:-100%
+}
+
+#myInput {
+  box-sizing: border-box;
+
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.titulo_menu{
+    color: white;
+    font-size: 37px;
+    padding-top: 15px;
+}
+
+.casos_totales{
+    color: #2a4f73;
+    font-size: 30px;
+}
+
+.texto_menu{
+    margin: 20px;
+    font-size: 25px;
+}
+
+.boton_menu{
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.boton_menu_borrar{
+    margin: 1px;
+    padding-left: 20px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.contenedor_titulo{
+    background-color: #2a4f73cf;
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+}
+
+.menu_boton{
+    width: 100%;
+    padding-left: 30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.puntero_ocultar{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.cerrar_pop_up{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    border-radius: 80px;
+    right: 10px;
+    top: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.abrir_pop_up {
+    position: absolute;
+    background-color: #f94545;
+    color: white;
+    padding: 10px;
+    border-radius: 80px;
+    left: 10px;
+    top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 2600px) {
+    .menu_lateral{
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 2100px) {
+    .menu_lateral{
+        width: 28%;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .menu_lateral{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .menu_lateral{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu_lateral{
+        width: 100%;
+    }
+    .cerrar_pop_up{
+        font-size: 71px;
+        padding: 20px 45px 20px 45px;
+    }
+    .abrir_pop_up{
+        border-radius: 100px;
+        font-size: 100px;
+        padding: 0px;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 0px;
+    }
+    .titulo_menu {
+        font-size: 80px;
+    }
+    .texto_menu {
+        font-size: 50px;
+    }
+    .boton_menu {
+        font-size: 50px;
+    }
+    #myDropdown {
+        font-size: 40px;
+    }
+    #myInput {
+        font-size: 40px;
+    }
+}
+
+
